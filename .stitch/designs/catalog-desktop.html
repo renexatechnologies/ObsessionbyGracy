@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catalog - Gracy's Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {secondary: "#695a67", "surface-tint": "#725572", "on-secondary-container": "#6d5e6b", "on-primary-fixed-variant": "#593d5a", "secondary-fixed-dim": "#d4c1d1", "on-background": "#1e1b1c", "primary-fixed": "#fdd7fb", "on-tertiary-fixed-variant": "#424a23", outline: "#7e747c", "on-secondary": "#ffffff", "secondary-fixed": "#f1dded", "on-tertiary-fixed": "#171e00", "on-primary-container": "#100014", "primary-container": "#8c6d8c", "inverse-on-surface": "#f6eff1", "surface-variant": "#e8e1e3", error: "#ba1a1a", "surface-container-low": "#f9f2f4", "on-secondary-fixed-variant": "#50424f", "on-error-container": "#93000a", "on-primary-fixed": "#2a132c", "outline-variant": "#cfc3cb", "on-tertiary": "#ffffff", "primary-fixed-dim": "#dfbbde", "tertiary-fixed": "#dee8b3", "on-tertiary-container": "#ffffff", tertiary: "#596238", "on-error": "#ffffff", surface: "#fff7f9", "error-container": "#ffdad6", "surface-dim": "#dfd8da", "surface-container-highest": "#e8e1e3", "on-primary": "#ffffff", "tertiary-container": "#727b4f", "on-surface": "#1e1b1c", background: "#fff7f9", "surface-container-high": "#eee6e8", "on-surface-variant": "#4c444b", "inverse-primary": "#dfbbde", "tertiary-fixed-dim": "#c2cb99", "inverse-surface": "#332f31", "surface-container-lowest": "#ffffff", "surface-bright": "#fff7f9", "on-secondary-fixed": "#231823", primary: "#725572", "surface-container": "#f3ecee", "secondary-container": "#eedaea"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"stack-md": "32px", "container-max": "1200px", unit: "8px", "stack-sm": "16px", "margin-desktop": "64px", gutter: "24px", "margin-mobile": "20px", "stack-lg": "64px"}, fontFamily: {"body-lg": ["Inter"], "label-md": ["Inter"], "headline-md": ["Noto Serif"], "headline-xl": ["Noto Serif"], "headline-lg": ["Noto Serif"], button: ["Inter"], "body-md": ["Inter"], headline: ["Noto Serif"], display: ["Noto Serif"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "400"}], "headline-xl": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "400"}], button: ["15px", {lineHeight: "1", letterSpacing: "0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}]}}}};</script>
+</head>
+<body class="antialiased pt-24 min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary" style="background-color: #8C9567; color: #fff7f9;">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-md border-b border-stone-900/10 dark:border-stone-100/10 flat no shadows">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-serif tracking-tighter text-stone-900 dark:text-stone-100 cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">Gracy's</a>
+</div>
+<div class="hidden md:flex items-center gap-8 font-serif tracking-widest uppercase text-xs text-stone-900 dark:text-stone-100">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">HOME</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">STORY</a>
+<a class="text-stone-900 dark:text-stone-50 border-b border-stone-900 dark:border-stone-50 pb-1 font-medium cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">CATALOG</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">CONTACT</a>
+</div>
+<div class="flex items-center gap-4 text-stone-900 dark:text-stone-100">
+<button class="cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-[1200px] w-full mx-auto px-8 py-stack-lg flex flex-col gap-stack-lg">
+<!-- Header & Intro -->
+<section class="text-center flex flex-col items-center gap-stack-sm mt-stack-md">
+<h1 class="font-headline-xl text-headline-xl max-w-2xl text-white">Our Signature Creations</h1>
+<p class="font-body-lg text-body-lg max-w-xl mx-auto text-stone-100">Discover our handcrafted heritage collection, baked daily with uncompromising quality and artisanal precision.</p>
+</section>
+<!-- Filters Section -->
+<section class="flex flex-col items-center gap-stack-md border-y border-outline-variant/30 py-8">
+<!-- Category Tabs -->
+<div class="flex flex-wrap justify-center gap-8">
+<button class="font-body-md text-body-md text-primary font-bold border-b border-primary pb-1">All</button>
+<button class="font-body-md text-body-md hover:text-primary transition-colors pb-1 text-stone-100">Festive Collections</button>
+<button class="font-body-md text-body-md hover:text-primary transition-colors pb-1 text-stone-100">Daily Breads</button>
+<button class="font-body-md text-body-md hover:text-primary transition-colors pb-1 text-stone-100">Brownies</button>
+</div>
+<!-- Weight Selectors (Pills) -->
+<div class="flex flex-wrap justify-center gap-3">
+<span class="font-label-md text-label-md mr-4 self-center text-stone-100">Filter by Weight:</span>
+<button class="border border-outline-variant rounded-full px-5 py-2 font-label-md text-label-md text-on-primary bg-primary transition-colors">1KG</button>
+<button class="border border-outline-variant rounded-full px-5 py-2 font-label-md text-label-md hover:bg-surface-container transition-colors text-stone-100">2KG</button>
+<button class="border border-outline-variant rounded-full px-5 py-2 font-label-md text-label-md hover:bg-surface-container transition-colors text-stone-100">5KG</button>
+<button class="border border-outline-variant rounded-full px-5 py-2 font-label-md text-label-md hover:bg-surface-container transition-colors text-stone-100">10KG</button>
+<button class="border border-outline-variant rounded-full px-5 py-2 font-label-md text-label-md hover:bg-surface-container transition-colors text-stone-100">20KG</button>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 (Pink) -->
+<article class="flex flex-col group cursor-pointer h-full">
+<div class="w-full aspect-[4/5] overflow-hidden rounded-t-lg bg-surface-container-low">
+<img alt="Chocolate Truffle Heritage Cake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A decadent, rich chocolate truffle cake sitting on a minimalist ceramic plate in a bright, sunlit heritage bakery. The cake is intricately decorated with chocolate shavings and a smooth ganache glaze. The lighting is soft and natural, emphasizing the luxurious texture and deep brown espresso tones of the chocolate against a clean, light-mode background. The mood is highly refined, editorial, and mouth-watering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqcbnKD_kqaUZHG-WnXiqJ96-rICJoVzCQ-3OB-05nwkWhcK8-UJ4W-ofCI1G539YoHjm69GwqbR0NL7yMx4Y3zkwScN6hLbmnY4DYTm1r_BbogNfre8nr9XHEmYS8f0F5cF3zkdp2nMkml9jw61FW8edANeA4E3c0sMXsTipRPHvdj3mPmj-MN3nhJ8kS9hluLZYBzSABXX9YOhQMUojn4GvjJ5n90dMhVb7aTOFWbA_j5CIQCccLw27VpMkhtYbs61ZFt7g_Kxdx"/>
+</div>
+<div class="flex flex-col p-6 bg-secondary-fixed rounded-b-lg flex-grow border-x border-b border-outline-variant/20">
+<div class="flex-grow flex flex-col gap-2">
+<span class="inline-block w-max px-3 py-1 bg-background text-primary font-label-md text-label-md rounded-full text-[10px] uppercase tracking-wider mb-2">Signature</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">Chocolate Truffle Heritage Cake</h3>
+<p class="font-body-md text-body-md mt-1 text-stone-100">₹ 1,365.00</p>
+</div>
+<button class="bg-primary text-on-primary rounded-full px-6 py-4 font-button text-button w-full mt-stack-sm hover:opacity-80 transition-opacity flex items-center justify-center gap-2">
+                        BUY NOW <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 2 (Blue) -->
+<article class="flex flex-col group cursor-pointer h-full">
+<div class="w-full aspect-[4/5] overflow-hidden rounded-t-lg bg-surface-container-low">
+<img alt="Vanilla Bean Celebration Cake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="An elegant, towering vanilla bean celebration cake adorned with fresh, edible pastel flowers and delicate white frosting. The cake is presented on a minimalist wooden pedestal table in a high-end bakery environment. Soft, diffused daylight filters through a window, highlighting the pristine white frosting and the subtle cream background. The aesthetic is clean, sophisticated, and celebratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIgrF143bI8cvP6IA3ZA3STT7zY1rSSzT-FjSMwktLnCKA2KK8Ex24QWJ6VwKlaXUM3U-BPdfLj63gOhk1PVXJ44guedbkXe8HTKrfe46_wv1nfhR4G5x0CHXb-rWlZrJmRpVL_FtSxuTO74cfiIJItMWW39Ywc0mHTELGuNqOqIQaYbOA03PVwJel4yyZsTFMUFGnD5GfZj346BJNnyEENXLoU6GT4o1rk5eKbASRADDo26OvUAJxoep9EVjecnWWcfuyzpoPtZeG"/>
+</div>
+<div class="flex flex-col p-6 bg-tertiary-fixed rounded-b-lg flex-grow border-x border-b border-outline-variant/20">
+<div class="flex-grow flex flex-col gap-2">
+<span class="inline-block w-max px-3 py-1 bg-background text-primary font-label-md text-label-md rounded-full text-[10px] uppercase tracking-wider mb-2">Seasonal</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">Vanilla Bean Celebration Cake</h3>
+<p class="font-body-md text-body-md mt-1 text-stone-100">₹ 1,250.00</p>
+</div>
+<button class="bg-primary text-on-primary rounded-full px-6 py-4 font-button text-button w-full mt-stack-sm hover:opacity-80 transition-opacity flex items-center justify-center gap-2">
+                        BUY NOW <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 3 (Pink) -->
+<article class="flex flex-col group cursor-pointer h-full">
+<div class="w-full aspect-[4/5] overflow-hidden rounded-t-lg bg-surface-container-low">
+<img alt="Classic Espresso Opera Cake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A meticulously crafted rectangular Opera cake featuring distinct layers of almond sponge, espresso syrup, French buttercream, and chocolate ganache. The slice is cleanly cut, revealing perfect internal architecture, placed on a matte white plate. The lighting is crisp and directional, casting subtle shadows that emphasize the minimalist, artisanal presentation typical of a luxury bakery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQAUmENpCAFj523nmoYjHm7Hxp80iSRiaThyY7aHC90VKlamOJSaqCdobiCYGI62gKoQ8-_nZVEK4tWV2qllUJ4C0tsFNIoD_1QETaoCkuleMA6B6u5Y4Y-5YK_8rhc7tSIuwkwph9oKybAjQZZwn51FQK0tma1Wr-74cgBEXBGlBnadBBAsS-CyYF0q0X9E7AT8xC-Aaj8Hx77hp63wzZSzxP8kz8DbjWKtovhG7OnRZqXxlz4wUZfOip3G4CKXOvaUlPiHxHBK7G"/>
+</div>
+<div class="flex flex-col p-6 bg-secondary-fixed rounded-b-lg flex-grow border-x border-b border-outline-variant/20">
+<div class="flex-grow flex flex-col gap-2">
+<span class="inline-block w-max px-3 py-1 bg-background text-primary font-label-md text-label-md rounded-full text-[10px] uppercase tracking-wider mb-2">Best Seller</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">Classic Espresso Opera Cake</h3>
+<p class="font-body-md text-body-md mt-1 text-stone-100">₹ 1,420.00</p>
+</div>
+<button class="bg-primary text-on-primary rounded-full px-6 py-4 font-button text-button w-full mt-stack-sm hover:opacity-80 transition-opacity flex items-center justify-center gap-2">
+                        BUY NOW <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- Card 4 (Blue) -->
+<article class="flex flex-col group cursor-pointer h-full">
+<div class="w-full aspect-[4/5] overflow-hidden rounded-t-lg bg-surface-container-low">
+<img alt="Pistachio Rosewater Sponge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A vibrant pistachio sponge cake infused with rosewater, layered with light cream and dusted with crushed green pistachios. The cake is displayed on a rustic yet refined stone slab counter. Bright, airy lighting enhances the pale green and cream tones of the dessert against a neutral, minimalist background. The mood is fresh, artisanal, and subtly luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp46Fdi8KuB_0iHd49AjSI-uTxTfZPs-FYL77yw89kxZtkKUsV42XURuZOlJuYTuVSQweVN6LkRc3HkA7o7i57YkhRvcsqP505gTvkcWiLPuGJEwqP0kgtaYsMfkhYBASzic3SQWoKy7sB7rzFRwHsWCIQ0QfSKN1dNYSBN7nTG2UaijxG9q-THiUWU4BR9Fz-Io5TV9rhogJbmchkLpfGmDssdx-f-aQR_QIWpJow_JOb1NMyYglrdC7903YYLg1tBIVf2mDV6B_2"/>
+</div>
+<div class="flex flex-col p-6 bg-tertiary-fixed rounded-b-lg flex-grow border-x border-b border-outline-variant/20">
+<div class="flex-grow flex flex-col gap-2">
+<span class="inline-block w-max px-3 py-1 bg-background text-primary font-label-md text-label-md rounded-full text-[10px] uppercase tracking-wider mb-2">New</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">Pistachio Rosewater Sponge</h3>
+<p class="font-body-md text-body-md mt-1 text-stone-100">₹ 1,550.00</p>
+</div>
+<button class="bg-primary text-on-primary rounded-full px-6 py-4 font-button text-button w-full mt-stack-sm hover:opacity-80 transition-opacity flex items-center justify-center gap-2">
+                        BUY NOW <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-100">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 mt-20 max-w-7xl mx-auto gap-6">
+<div class="text-xl font-serif tracking-tighter text-stone-900 dark:text-stone-100">Gracy's</div>
+<nav class="flex gap-6 items-center">
+<a class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-opacity ease-in-out duration-200" href="#">Privacy Policy</a>
+<a class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-opacity ease-in-out duration-200" href="#">Terms of Service</a>
+<a class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-opacity ease-in-out duration-200" href="#">Shipping &amp; Returns</a>
+<a class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-opacity ease-in-out duration-200" href="#">Wholesale</a>
+</nav>
+<div class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500">
+                © 2024 Gracy's Bakery. Editorial Heritage Collection.
+            </div>
+</div>
+</footer>
+</body></html>

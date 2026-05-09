@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gracy's Bakery - Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary-fixed": "#ffd9e2",
+                "surface-container": "#efeeea",
+                "surface-bright": "#fbf9f5",
+                "on-primary-container": "#f7fff1",
+                "inverse-primary": "#b1ceac",
+                "on-primary-fixed": "#08200a",
+                "on-surface": "#1b1c1a",
+                "surface-variant": "#e4e2df",
+                "on-secondary-fixed-variant": "#3f4a3d",
+                "on-primary-fixed-variant": "#344d32",
+                "on-error": "#ffffff",
+                "surface-tint": "#4b6549",
+                "surface-container-low": "#f5f3ef",
+                "error-container": "#ffdad6",
+                "on-tertiary-container": "#fffbff",
+                "surface-container-lowest": "#ffffff",
+                "surface": "#fbf9f5",
+                "on-tertiary-fixed": "#30111c",
+                "on-tertiary-fixed-variant": "#623b47",
+                "surface-dim": "#dbdad6",
+                "on-primary": "#ffffff",
+                "inverse-on-surface": "#f2f1ed",
+                "on-secondary-fixed": "#141e14",
+                "on-background": "#1b1c1a",
+                "secondary": "#576154",
+                "primary-fixed": "#cdebc7",
+                "on-secondary": "#ffffff",
+                "on-surface-variant": "#434841",
+                "secondary-fixed": "#dae6d5",
+                "primary-container": "#617b5e",
+                "tertiary-container": "#956875",
+                "surface-container-high": "#e9e8e4",
+                "tertiary": "#7a505c",
+                "outline-variant": "#c3c8be",
+                "outline": "#737970",
+                "secondary-fixed-dim": "#becaba",
+                "tertiary-fixed-dim": "#eeb8c6",
+                "error": "#ba1a1a",
+                "primary-fixed-dim": "#b1ceac",
+                "inverse-surface": "#30312e",
+                "on-error-container": "#93000a",
+                "background": "#fbf9f5",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#5d675a",
+                "surface-container-highest": "#e4e2df",
+                "secondary-container": "#dae6d5",
+                "primary": "#486246"
+        },
+        "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-sm": "16px",
+                "margin-desktop": "64px",
+                "stack-lg": "64px",
+                "gutter": "24px",
+                "stack-md": "32px",
+                "container-max": "1200px",
+                "unit": "8",
+                "margin-mobile": "20px"
+        },
+        "fontFamily": {
+                "button": [
+                        "Inter"
+                ],
+                "label-md": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "headline-xl": [
+                        "Noto Serif"
+                ],
+                "headline-md": [
+                        "Noto Serif"
+                ],
+                "headline-lg": [
+                        "Noto Serif"
+                ]
+        },
+        "fontSize": {
+                "button": [
+                        "15px",
+                        {
+                                "lineHeight": "1",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: #8C9567; /* Override background to match user request */
+  }
+</style>
+</head>
+<body class="text-on-primary min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#708c6d] dark:bg-[#5a7057] text-white dark:text-stone-100 border-b border-white/10 flat no shadows docked full-width top-0">
+<button class="hover:text-stone-200 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-white/80">menu</span>
+</button>
+<div class="text-lg font-['Noto_Serif'] font-medium tracking-[0.25em] text-white">HERITAGE BAKERY</div>
+<button class="hover:text-stone-200 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-white/80">shopping_bag</span>
+</button>
+</header>
+<main class="pt-24 px-6 pb-8 max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="mb-10 text-center">
+<h1 class="font-headline-lg text-[34px] leading-tight font-medium font-['Noto_Serif'] text-white mb-3">Our Signature<br/>Creations</h1>
+<p class="font-body-md text-[17px] font-light tracking-wide text-white/90">Crafted with passion, baked with heritage.</p>
+</section>
+<!-- Filters -->
+<div class="overflow-x-auto pb-6 mb-8 hide-scrollbar">
+<div class="flex space-x-4 w-max">
+<button class="px-7 py-2.5 rounded-full font-medium text-[15px] bg-white/95 text-[#708c6d] border border-transparent whitespace-nowrap shadow-sm">All</button>
+<button class="px-7 py-2.5 rounded-full font-medium text-[15px] bg-white/10 text-white border border-white/30 hover:bg-white/20 transition-all whitespace-nowrap backdrop-blur-sm">Festive</button>
+<button class="px-7 py-2.5 rounded-full font-medium text-[15px] bg-white/10 text-white border border-white/30 hover:bg-white/20 transition-all whitespace-nowrap backdrop-blur-sm">Breads</button>
+<button class="px-7 py-2.5 rounded-full font-medium text-[15px] bg-white/10 text-white border border-white/30 hover:bg-white/20 transition-all whitespace-nowrap backdrop-blur-sm">Pastries</button>
+<button class="px-7 py-2.5 rounded-full font-medium text-[15px] bg-white/10 text-white border border-white/30 hover:bg-white/20 transition-all whitespace-nowrap backdrop-blur-sm">1KG</button>
+<button class="px-7 py-2.5 rounded-full font-medium text-[15px] bg-white/10 text-white border border-white/30 hover:bg-white/20 transition-all whitespace-nowrap backdrop-blur-sm">2KG</button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-6">
+<!-- Product Card 1 -->
+<article class="flex flex-col bg-[#fdfbf7] rounded-2xl overflow-hidden shadow-lg shadow-black/5">
+<div class="aspect-[4/5] relative">
+<img alt="A beautifully decorated signature cake" class="absolute inset-0 w-full h-full object-cover" data-alt="A beautifully crafted signature cake from a heritage bakery, featuring intricate botanical decorations and smooth pastel icing. The cake is presented on a minimalist ceramic stand in a bright, airy editorial setting. Soft, natural daylight highlights the delicate textures of the frosting and organic garnish, creating an elegant and appetizing atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc3o9wcriWPbqRLJwqqoZA40WueFb_IRsVkg4qoJTOc3D4Hov4FvlYqGqMGOQe-zI5yxZEowBjzcIMUa0-E4rB6l-hSJ9DXCpZYPYXEHgrq8P912rdYME2DoyYDukiHga4uBQLCwWjKC6FI5igUjJY651t05tIIFj4BESHNkg11DCkgYdpOJle_q54sCfvYy_z4lrXbXlkGvT-HscrNVg3HyOC05rzb4c872DbLCT124Npm1haQSvofMAchAaQlOoFLPKqO0edBSeg"/>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="font-['Noto_Serif'] text-xl text-[#2c1b18] mb-1.5 line-clamp-1">Classic Victoria</h3>
+<p class="font-['Inter'] text-[15px] font-medium text-[#5a6055] mb-5 tracking-wide">₹ 1,365.00</p>
+<div class="mt-auto">
+<button class="w-full bg-[#3e2723] text-white py-3 rounded-full font-semibold text-[13px] tracking-[0.1em] hover:bg-[#2c1b18] transition-colors shadow-sm">BUY NOW</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="flex flex-col bg-[#fdfbf7] rounded-2xl overflow-hidden shadow-lg shadow-black/5">
+<div class="aspect-[4/5] relative bg-surface-variant">
+<img alt="Artisanal sourdough bread" class="absolute inset-0 w-full h-full object-cover" data-alt="A rustic, freshly baked artisanal sourdough loaf resting on a linen cloth in a sunlit bakery setting. The crust is deeply caramelized and textured, suggesting a satisfying crunch. The warm, earthy tones of the bread are complemented by a refined, minimalist background, evoking a sense of traditional craftsmanship and slow living." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfeDAbJt2HKWwO1-KnXwOV7nkFcXVGxqpNugUFpaRgIrZ-Hjv9oyVWTbBxxducg2_kihk8t4Q8plZfXkO2wLSgxDuZ36f_HajUpP6co9KQvcyJCqnKu_hOG3SsSclTB7IUnLEsxzcpDqet_Mn14WJWJvf_6dKAFmiAa8u2oZZ1p3umBFilZZJ6X2YxH8ma6xICuhrVmr6z1Ca-fxE0tHMxtRz23-jK9YN9Y9FFE089NNa_eTmlSZI4uGNd89MyVo_6oiASqFdJBm4h"/>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="font-['Noto_Serif'] text-xl text-[#2c1b18] mb-1.5 line-clamp-1">Rustic Sourdough</h3>
+<p class="font-['Inter'] text-[15px] font-medium text-[#5a6055] mb-5 tracking-wide">₹ 450.00</p>
+<div class="mt-auto">
+<button class="w-full bg-[#3e2723] text-white py-3 rounded-full font-semibold text-[13px] tracking-[0.1em] hover:bg-[#2c1b18] transition-colors shadow-sm">BUY NOW</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="flex flex-col bg-[#fdfbf7] rounded-2xl overflow-hidden shadow-lg shadow-black/5">
+<div class="aspect-[4/5] relative bg-surface-variant">
+<img alt="Elegant berry tart" class="absolute inset-0 w-full h-full object-cover" data-alt="An elegant, individual-sized berry tart featuring a crisp pastry shell filled with smooth vanilla custard, topped with meticulously arranged fresh raspberries and blueberries. The tart sits on a pristine marble surface under soft, diffused lighting. The vibrant colors of the fruit contrast beautifully with the minimalist, high-end editorial styling of the scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu8LOtWi76ovwcb1LDrjlz6WXc-DHeaJhkfdfkbHCebAQsUTvC2DHI-TIw4UyQjqP9IZjsB3DiQPo-7UXtIJe7VQ9m3uYl5mLP15LN-JviCPHIPcWm4JQe11OJheWL7XFUTdJtdN_IGCec1MMOwQ7B3eW6oK4RTLYxD5dGWmM7Fv5Q25utb5VA8GOZ93dmGv6wFrHiSGI9MwqB2KsS139N5PWi0t4-iGj7Eg_4Nc96P7mGm6HOYmIGxbgU7wlqLY611mgxQbkby2XE"/>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="font-['Noto_Serif'] text-xl text-[#2c1b18] mb-1.5 line-clamp-1">Seasonal Berry Tart</h3>
+<p class="font-['Inter'] text-[15px] font-medium text-[#5a6055] mb-5 tracking-wide">₹ 850.00</p>
+<div class="mt-auto">
+<button class="w-full bg-[#3e2723] text-white py-3 rounded-full font-semibold text-[13px] tracking-[0.1em] hover:bg-[#2c1b18] transition-colors shadow-sm">BUY NOW</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="flex flex-col bg-[#fdfbf7] rounded-2xl overflow-hidden shadow-lg shadow-black/5">
+<div class="aspect-[4/5] relative bg-surface-variant">
+<img alt="Decadent chocolate gateau" class="absolute inset-0 w-full h-full object-cover" data-alt="A slice of a decadent, multi-layered dark chocolate gateau, showcasing rich, glossy ganache and moist sponge. It is presented on a minimalist slate plate with a subtle dusting of premium cocoa powder. The moody, dramatic lighting enhances the deep brown tones of the chocolate, creating a luxurious and indulgent visual narrative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr1VWUvxGsC_X4pMSM_pOSdL61RO7GLTtORD1iFTWfgId2-l0kj1rv8P68R1zMQQyQT_83ZxyLzYXm2DaE8Z_kqgw6sRxrHtNUani8LECM8FapqalDRyh7hpg3NwSz6jOwMIPBqdoZc_fsvrbgu5U3bDJrTqzPZYkuhEuuYw7-_q42WfeANou8H-jaxvJ-N7aEKs4Vu527vDtdjQnR-CzHmwmeXIK-m3YX-Tw_XF5EQElTnKnNM8sBvCOVK_xu_EUXcel7CZAUQp52"/>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<h3 class="font-['Noto_Serif'] text-xl text-[#2c1b18] mb-1.5 line-clamp-1">Dark Chocolate Truffle</h3>
+<p class="font-['Inter'] text-[15px] font-medium text-[#5a6055] mb-5 tracking-wide">₹ 1,800.00</p>
+<div class="mt-auto">
+<button class="w-full bg-[#3e2723] text-white py-3 rounded-full font-semibold text-[13px] tracking-[0.1em] hover:bg-[#2c1b18] transition-colors shadow-sm">BUY NOW</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-[#708c6d] dark:bg-[#5a7057] text-white dark:text-stone-100 font-['Noto_Serif'] text-[10px] tracking-wider uppercase border-t border-white/10 flat no shadows docked full-width bottom-0">
+<button class="flex flex-col items-center justify-center text-white/60 px-5 py-1.5 hover:bg-white/10 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">home</span>
+<span>Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-white/15 text-white rounded-full px-5 py-1.5 hover:bg-white/10 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<span>Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white/60 px-5 py-1.5 hover:bg-white/10 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">menu_book</span>
+<span>Journal</span>
+</button>
+<button class="flex flex-col items-center justify-center text-white/60 px-5 py-1.5 hover:bg-white/10 transition-all active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1">person</span>
+<span>Profile</span>
+</button>
+</nav>
+<!-- Desktop Nav (Hidden on mobile) -->
+<nav class="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-6 h-16 bg-[#708c6d] dark:bg-[#5a7057] text-white dark:text-stone-100 border-b border-white/10">
+<div class="text-lg font-['Noto_Serif'] font-medium tracking-[0.25em] text-white">HERITAGE BAKERY</div>
+<div class="flex space-x-6 font-['Noto_Serif'] text-sm tracking-[0.15em] uppercase">
+<a class="text-white/80 hover:text-stone-200 transition-colors" href="#">Home</a>
+<a class="text-white font-bold hover:text-stone-200 transition-colors" href="#">Shop</a>
+<a class="text-white/80 hover:text-stone-200 transition-colors" href="#">Journal</a>
+<a class="text-white/80 hover:text-stone-200 transition-colors" href="#">Profile</a>
+</div>
+<button class="hover:text-stone-200 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-white/80">shopping_bag</span>
+</button>
+</nav>
+</body></html>

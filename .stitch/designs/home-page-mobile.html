@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gracy's Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-variant": "#e4e2df",
+                "on-secondary-container": "#5d675a",
+                "secondary-fixed-dim": "#becaba",
+                "on-error-container": "#93000a",
+                "surface-container-low": "#f5f3ef",
+                "surface-container-high": "#e9e8e4",
+                "surface-container": "#efeeea",
+                "outline": "#737970",
+                "secondary": "#576154",
+                "on-error": "#ffffff",
+                "surface-bright": "#fbf9f5",
+                "secondary-fixed": "#dae6d5",
+                "on-primary-fixed-variant": "#344d32",
+                "on-primary-fixed": "#08200a",
+                "surface-dim": "#dbdad6",
+                "inverse-primary": "#b1ceac",
+                "primary-container": "#617b5e",
+                "on-surface": "#1b1c1a",
+                "on-tertiary": "#ffffff",
+                "inverse-on-surface": "#f2f1ed",
+                "tertiary": "#7a505c",
+                "on-secondary-fixed-variant": "#3f4a3d",
+                "primary": "#486246",
+                "tertiary-fixed": "#ffd9e2",
+                "on-tertiary-fixed": "#30111c",
+                "on-tertiary-container": "#fffbff",
+                "on-surface-variant": "#434841",
+                "surface-container-highest": "#e4e2df",
+                "on-primary-container": "#f7fff1",
+                "surface": "#fbf9f5",
+                "inverse-surface": "#30312e",
+                "tertiary-fixed-dim": "#eeb8c6",
+                "primary-fixed": "#cdebc7",
+                "outline-variant": "#c3c8be",
+                "tertiary-container": "#956875",
+                "on-primary": "#ffffff",
+                "background": "#fbf9f5",
+                "surface-tint": "#4b6549",
+                "primary-fixed-dim": "#b1ceac",
+                "on-secondary": "#ffffff",
+                "error-container": "#ffdad6",
+                "on-tertiary-fixed-variant": "#623b47",
+                "on-background": "#1b1c1a",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed": "#141e14",
+                "secondary-container": "#dae6d5",
+                "error": "#ba1a1a"
+        },
+        "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "stack-md": "32px",
+                "stack-sm": "16px",
+                "gutter": "24px",
+                "container-max": "1200px",
+                "margin-desktop": "64px",
+                "unit": "8",
+                "margin-mobile": "20px",
+                "stack-lg": "64px"
+        },
+        "fontFamily": {
+                "headline-xl": [
+                        "Noto Serif"
+                ],
+                "headline-md": [
+                        "Noto Serif"
+                ],
+                "button": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "label-md": [
+                        "Inter"
+                ],
+                "headline-lg": [
+                        "Noto Serif"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "400"
+                        }
+                ],
+                "button": [
+                        "15px",
+                        {
+                                "lineHeight": "1",
+                                "letterSpacing": "0.02em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: #fbf9f5;
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+</style>
+</head>
+<body class="text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-[#fcfaf7] dark:bg-stone-950 font-['Noto_Serif'] tracking-[0.2em] uppercase text-sm border-b border-[#637e60]/10 dark:border-white/5 docked full-width top-0 flat no shadows fixed left-0 w-full z-50 flex justify-between items-center px-6 h-16">
+<button aria-label="Menu" class="text-[#708c6d] dark:text-[#8ba888] hover:opacity-70 transition-opacity flex items-center justify-center p-2 -ml-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-['Noto_Serif'] font-medium tracking-[0.3em] text-[#637e60] dark:text-[#8ba888] text-lg text-center flex-1">
+      GRACY'S BAKERY
+    </div>
+<button aria-label="Shopping Bag" class="text-[#708c6d] dark:text-[#8ba888] hover:opacity-70 transition-opacity flex items-center justify-center p-2 -mr-2">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</header>
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="bg-[#8C9567] text-white px-margin-mobile py-stack-lg flex flex-col items-center justify-center text-center">
+<h1 class="font-headline-xl text-headline-xl mb-stack-sm text-on-primary">Welcome to Gracy’s Kitchen</h1>
+<p class="font-body-lg text-body-lg mb-stack-md text-on-primary/90 max-w-md">Crafting heritage sourdough and artisanal pastries since 1924.</p>
+<button class="bg-[#3E2723] text-white px-8 py-4 rounded-full font-button text-button hover:opacity-90 transition-opacity uppercase tracking-wider">
+        EXPLORE COLLECTION
+      </button>
+</section>
+<!-- Value Prop Grid -->
+<section class="px-margin-mobile py-stack-lg bg-surface">
+<div class="grid grid-cols-2 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center text-center p-stack-sm rounded-DEFAULT bg-surface-container-lowest border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-unit">
+<span class="material-symbols-outlined" data-icon="cake">cake</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface">Design to meet your needs</h3>
+</div>
+<div class="flex flex-col items-center text-center p-stack-sm rounded-DEFAULT bg-surface-container-lowest border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-unit">
+<span class="material-symbols-outlined" data-icon="blender">blender</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface">Organic, Nourishing, Clean Food</h3>
+</div>
+<div class="flex flex-col items-center text-center p-stack-sm rounded-DEFAULT bg-surface-container-lowest border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-unit">
+<span class="material-symbols-outlined" data-icon="cookie">cookie</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface">Actually tasty. Undeniably delicious</h3>
+</div>
+<div class="flex flex-col items-center text-center p-stack-sm rounded-DEFAULT bg-surface-container-lowest border border-outline-variant/30">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-unit">
+<span class="material-symbols-outlined" data-icon="bakery_dining">bakery_dining</span>
+</div>
+<h3 class="font-label-md text-label-md text-on-surface">Delivered to you and ready in minutes</h3>
+</div>
+</div>
+</section>
+<!-- Featured Section -->
+<section class="px-margin-mobile py-stack-lg bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-unit">Heritage Sourdough</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">Our signature loaf, naturally leavened and slow-fermented for 48 hours to develop a complex, tangy flavor and a perfectly crackling crust.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden bg-[#fcfaf7]/90 backdrop-blur-md dark:bg-stone-950/90 font-['Noto_Serif'] text-[10px] tracking-wider uppercase docked full-width bottom-0 border-t border-[#637e60]/10 dark:border-white/5 flat no shadows fixed left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-4">
+<button class="flex flex-col items-center justify-center text-[#637e60] dark:text-[#8ba888] font-bold scale-95 duration-150">
+<span class="material-symbols-outlined mb-1" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span>Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#637e60]/40 dark:text-stone-500 hover:text-[#637e60] dark:hover:text-[#8ba888] transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="cookie">cookie</span>
+<span>Bakery</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#637e60]/40 dark:text-stone-500 hover:text-[#637e60] dark:hover:text-[#8ba888] transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="spa">spa</span>
+<span>Seasonal</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#637e60]/40 dark:text-stone-500 hover:text-[#637e60] dark:hover:text-[#8ba888] transition-colors">
+<span class="material-symbols-outlined mb-1" data-icon="receipt_long">receipt_long</span>
+<span>Orders</span>
+</button>
+</nav>
+</body></html>

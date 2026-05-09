@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catalog - Gracy's Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {secondary: "#695a67", "surface-tint": "#725572", "on-secondary-container": "#6d5e6b", "on-primary-fixed-variant": "#593d5a", "secondary-fixed-dim": "#d4c1d1", "on-background": "#1e1b1c", "primary-fixed": "#fdd7fb", "on-tertiary-fixed-variant": "#424a23", outline: "#7e747c", "on-secondary": "#ffffff", "secondary-fixed": "#f1dded", "on-tertiary-fixed": "#171e00", "on-primary-container": "#100014", "primary-container": "#8c6d8c", "inverse-on-surface": "#f6eff1", "surface-variant": "#e8e1e3", error: "#ba1a1a", "surface-container-low": "#f9f2f4", "on-secondary-fixed-variant": "#50424f", "on-error-container": "#93000a", "on-primary-fixed": "#2a132c", "outline-variant": "#cfc3cb", "on-tertiary": "#ffffff", "primary-fixed-dim": "#dfbbde", "tertiary-fixed": "#dee8b3", "on-tertiary-container": "#ffffff", tertiary: "#596238", "on-error": "#ffffff", surface: "#fff7f9", "error-container": "#ffdad6", "surface-dim": "#dfd8da", "surface-container-highest": "#e8e1e3", "on-primary": "#ffffff", "tertiary-container": "#727b4f", "on-surface": "#1e1b1c", background: "#fff7f9", "surface-container-high": "#eee6e8", "on-surface-variant": "#4c444b", "inverse-primary": "#dfbbde", "tertiary-fixed-dim": "#c2cb99", "inverse-surface": "#332f31", "surface-container-lowest": "#ffffff", "surface-bright": "#fff7f9", "on-secondary-fixed": "#231823", primary: "#725572", "surface-container": "#f3ecee", "secondary-container": "#eedaea"}, borderRadius: {DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px"}, spacing: {"stack-md": "32px", "container-max": "1200px", unit: "8px", "stack-sm": "16px", "margin-desktop": "64px", gutter: "24px", "margin-mobile": "20px", "stack-lg": "64px"}, fontFamily: {"body-lg": ["Inter"], "label-md": ["Inter"], "headline-md": ["Noto Serif"], "headline-xl": ["Noto Serif"], "headline-lg": ["Noto Serif"], button: ["Inter"], "body-md": ["Inter"], headline: ["Noto Serif"], display: ["Noto Serif"], body: ["Inter"], label: ["Inter"]}, fontSize: {"body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "500"}], "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "400"}], "headline-xl": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "400"}], "headline-lg": ["32px", {lineHeight: "1.2", fontWeight: "400"}], button: ["15px", {lineHeight: "1", letterSpacing: "0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.6", fontWeight: "400"}]}}}};</script>
+</head>
+<body class="antialiased pt-24 min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary" style="background-color: #8C9567; color: #fff7f9;">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-md border-b border-stone-900/10 dark:border-stone-100/10 flat no shadows">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+<div class="flex items-center gap-8">
+<a class="text-2xl font-serif tracking-tighter text-stone-900 dark:text-stone-100 cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">Gracy's</a>
+</div>
+<div class="hidden md:flex items-center gap-8 font-serif tracking-widest uppercase text-xs text-stone-900 dark:text-stone-100">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">HOME</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">STORY</a>
+<a class="text-stone-900 dark:text-stone-50 border-b border-stone-900 dark:border-stone-50 pb-1 font-medium cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">CATALOG</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity" href="#">CONTACT</a>
+</div>
+<div class="flex items-center gap-4 text-stone-900 dark:text-stone-100">
+<button class="cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-[1200px] w-full mx-auto px-8 py-stack-lg flex flex-col lg:flex-row gap-gutter mt-8">
+<!-- Left Column: Image and Location -->
+<section class="flex flex-col gap-6 w-full lg:w-1/2">
+<div class="w-full aspect-[3/4] overflow-hidden rounded-2xl bg-surface-container-low shadow-lg">
+<img alt="A baker standing next to a massive, beautifully decorated, human-sized artisanal cake in a bright heritage bakery." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4tjIDBpG6L8q6sqJZYOqKMnwffIycK_7Ex497YNq7c2ZzTYK9tcJ8utzjaTBjQ6X5-wU5Z5WVol6INKP6TdDSolA_ub7VLSYioUrfJ8S1qLvD2lYOrbtqrHpxCAUIwGhK7dAyyH3H8MwKgfUxTlVm6Q8KjzhM-5h5aOZ4YTacq18FNYFGAt4cemnPHEJuLkhyAx7vfDw5HbaJC3p4SNKE1qbDyk-je5uOohX_CvYP9HSK34tJGmH1wmma2_7AgRnTWR0ISjeoNmAi"/>
+</div>
+<div class="flex flex-col gap-4 p-6 bg-stone-50/10 rounded-2xl border border-stone-100/20 backdrop-blur-sm">
+<div class="w-full h-32 bg-stone-300 rounded-xl flex items-center justify-center overflow-hidden relative">
+<img alt="Map location" class="w-full h-full object-cover opacity-70 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClYyJ4TchNLyB8n7zKA3f0m9PKaZsJUmfYkbPmdBajdtTLWIX7zkXbl79Yf0HYbFMl4U8zc1aQWExtIhKyedekmv02tnqmnTxLM0VLj6YXaesnjJA54siuKLcHj_gyD7DKCHfoOdPJPHv_hXSLN_Jk-PeavnAPcIoLxHKZXB2hCyTQp0OuJ9qww9GAr_w7cAKFjV6mQAVur3MsCI5RCLTZlRdqwdevT-Q_FUBvLws3-zYzMSR8JEMt5ZMEO_FGveCkyOfGlvvGOYPi"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-stone-900 drop-shadow-md">location_on</span>
+</div>
+</div>
+<div class="text-stone-50 font-body-md text-body-md">
+<p class="font-bold text-lg mb-1">Gracy's Bakery Flagship</p>
+<p>124 Heritage Lane</p>
+<p>Bakery District, NY 10001</p>
+</div>
+</div>
+</section>
+<!-- Right Column: Inquiry Form -->
+<section class="flex flex-col w-full lg:w-1/2">
+<div class="bg-surface-container-lowest rounded-3xl p-8 lg:p-10 shadow-xl flex flex-col gap-6 h-full border border-outline-variant/20">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Book Your Masterpiece</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Inquire about our custom heritage cakes for your special event.</p>
+</div>
+<form class="flex flex-col gap-5 flex-grow">
+<!-- Event Date -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="event-date">Event Date</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl px-4 py-3 font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="event-date" type="date"/>
+</div>
+<!-- Flavors of Choice -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="flavors">Flavors of Choice</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-xl px-4 py-3 font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="flavors">
+<option value="">Select a signature flavor...</option>
+<option value="truffle">Chocolate Truffle Heritage</option>
+<option value="vanilla">Vanilla Bean Celebration</option>
+<option value="espresso">Classic Espresso Opera</option>
+<option value="pistachio">Pistachio Rosewater Sponge</option>
+<option value="custom">Custom Blend Inquiry</option>
+</select>
+</div>
+<!-- Event For -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="event-type">Event For</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded-xl px-4 py-3 font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="event-type">
+<option value="">Select event type...</option>
+<option value="wedding">Wedding</option>
+<option value="anniversary">Anniversary</option>
+<option value="birthday">Milestone Birthday</option>
+<option value="corporate">Corporate Gala</option>
+<option value="other">Other Celebration</option>
+</select>
+</div>
+<!-- Quantity -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface" for="quantity">Estimated Servings (Quantity)</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-xl px-4 py-3 font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" id="quantity" min="10" placeholder="e.g. 150" type="number"/>
+</div>
+<!-- Message -->
+<div class="flex flex-col gap-2 flex-grow">
+<label class="font-label-md text-label-md text-on-surface" for="message">Additional Information</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-xl px-4 py-3 font-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none flex-grow transition-shadow" id="message" placeholder="Tell us about your vision, dietary requirements, or specific requests..." rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="bg-primary text-on-primary rounded-full px-8 py-4 font-button text-button w-full mt-2 hover:bg-surface-tint hover:shadow-md transition-all active:scale-[0.98] flex items-center justify-center gap-2" type="submit">
+                    SUBMIT INQUIRY <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-100 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 mt-20 max-w-7xl mx-auto gap-6">
+<div class="text-xl font-serif tracking-tighter text-stone-900 dark:text-stone-100">Gracy's</div>
+<nav class="flex gap-6 items-center">
+<a class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-opacity ease-in-out duration-200" href="#">Privacy Policy</a>
+<a class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-opacity ease-in-out duration-200" href="#">Terms of Service</a>
+<a class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-opacity ease-in-out duration-200" href="#">Shipping &amp; Returns</a>
+<a class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-opacity ease-in-out duration-200" href="#">Wholesale</a>
+</nav>
+<div class="font-serif text-xs tracking-wider uppercase text-stone-400 dark:text-stone-500">
+                © 2024 Gracy's Bakery. Editorial Heritage Collection.
+            </div>
+</div>
+</footer>
+</body></html>

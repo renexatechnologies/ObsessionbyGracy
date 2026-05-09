@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bespoke Inquiry - Gracy's</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary-container": "#fcffe2",
+                "on-tertiary-fixed": "#2a132b",
+                "on-tertiary": "#ffffff",
+                "surface-container": "#fcebdd",
+                "on-background": "#221a12",
+                "on-primary-fixed": "#181e00",
+                "outline-variant": "#c7c7ba",
+                "tertiary-container": "#8a6b88",
+                "surface-tint": "#5a6239",
+                "surface-container-high": "#f6e5d8",
+                "surface-container-highest": "#f0e0d2",
+                "on-tertiary-container": "#fffbff",
+                "on-secondary-fixed": "#2b1613",
+                "primary-fixed": "#dee8b3",
+                "on-surface": "#221a12",
+                "tertiary": "#70526f",
+                "surface-container-low": "#fff1e7",
+                "error-container": "#ffdad6",
+                "background": "#fff8f4",
+                "surface": "#fff8f4",
+                "secondary": "#745853",
+                "on-secondary-container": "#795c57",
+                "inverse-primary": "#c2cb99",
+                "on-error-container": "#93000a",
+                "surface-variant": "#f0e0d2",
+                "primary-fixed-dim": "#c2cb99",
+                "surface-dim": "#e7d7ca",
+                "surface-bright": "#fff8f4",
+                "secondary-container": "#fed7d0",
+                "error": "#ba1a1a",
+                "on-secondary-fixed-variant": "#5b403c",
+                "inverse-on-surface": "#ffeee0",
+                "on-primary": "#ffffff",
+                "on-tertiary-fixed-variant": "#593e59",
+                "on-surface-variant": "#46483d",
+                "tertiary-fixed": "#fdd7f9",
+                "secondary-fixed": "#ffdad4",
+                "on-primary-fixed-variant": "#424a24",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "outline": "#77786c",
+                "primary": "#576037",
+                "surface-container-lowest": "#ffffff",
+                "secondary-fixed-dim": "#e3beb8",
+                "tertiary-fixed-dim": "#e0bbdd",
+                "primary-container": "#70794d",
+                "inverse-surface": "#382f26"
+        },
+        "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "unit": "8px",
+                "margin-page": "64px",
+                "section-padding": "120px",
+                "container-max": "1200px",
+                "gutter": "32px"
+        },
+        "fontFamily": {
+                "headline-xl": [
+                        "Newsreader"
+                ],
+                "headline-md": [
+                        "Newsreader"
+                ],
+                "body-md": [
+                        "Work Sans"
+                ],
+                "body-lg": [
+                        "Work Sans"
+                ],
+                "display-lg": [
+                        "Newsreader"
+                ],
+                "label-caps": [
+                        "Work Sans"
+                ]
+        },
+        "fontSize": {
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "64px",
+                        {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+    /* Custom styles mapped from theme where utilities fall short */
+    .bg-sage-green { background-color: #8C9567; }
+    .text-sage-green { color: #8C9567; }
+    .bg-espresso { background-color: #221a12; } /* using on-background as closest espresso */
+    .text-espresso { color: #221a12; }
+    .border-taupe { border-color: #c7c7ba; } /* using outline-variant */
+    
+    /* Ensure content avoids fixed navs */
+    main { padding-top: 72px; padding-bottom: 80px; }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md h-screen flex flex-col md:hidden">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-stone-950 text-stone-900 dark:text-stone-100 font-serif tracking-tight text-lg docked full-width top-0 border-b border-stone-200 dark:border-stone-800 flat no shadows flex justify-between items-center w-full px-6 py-4 fixed z-50">
+<div class="leading-icon hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</div>
+<div class="headline font-serif italic text-2xl tracking-tighter text-stone-900 dark:text-stone-100">Gracy's</div>
+<div class="trailing-avatar hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="user_profile_photo">photo</span>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow bg-sage-green flex flex-col overflow-y-auto">
+<!-- Hero Image -->
+<div class="w-full h-80 relative">
+<img alt="Hero image of bespoke cake" class="w-full h-full object-cover rounded-none" data-alt="A highly detailed, professional food photography shot of a grand, multi-tiered artisanal bespoke cake. The cake features exquisite, hand-crafted fondant details with a minimalist, premium aesthetic. Lighting is soft and directional, highlighting the texture of the icing and the delicate decorative elements. The scene is set against a muted, sophisticated background that complements the editorial, high-end feel of a luxury bakery, capturing a mood of celebration and refined taste." src="https://lh3.googleusercontent.com/aida/ADBb0ui3_266_J060W_u99v8-R6yV3z7p4m-H-J4z3-R6yV3z7p4m-H-J4z3-R6yV3z7p4m-H-J4z3"/>
+</div>
+<!-- Inquiry Form Card -->
+<div class="bg-white rounded-t-xl -mt-6 z-10 px-6 py-8 shadow-none border-t border-taupe mx-4 rounded-b-xl mb-8">
+<h1 class="font-headline-md text-headline-md text-espresso text-center mb-8">Book Your Masterpiece</h1>
+<form class="space-y-6">
+<!-- Event Date -->
+<div class="flex flex-col border-b border-taupe pb-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Event Date</label>
+<div class="flex items-center justify-between">
+<input class="bg-transparent border-none focus:ring-0 p-0 text-on-surface font-body-md w-full" placeholder="Select Date" type="text"/>
+<span class="material-symbols-outlined text-on-surface-variant">calendar_today</span>
+</div>
+</div>
+<!-- Flavors of Choice -->
+<div class="flex flex-col border-b border-taupe pb-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Flavors of Choice</label>
+<div class="flex items-center justify-between">
+<select class="bg-transparent border-none focus:ring-0 p-0 text-on-surface font-body-md w-full appearance-none">
+<option>Signature Vanilla Bean</option>
+<option>Dark Chocolate Truffle</option>
+<option>Lemon Raspberry</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Event For -->
+<div class="flex flex-col border-b border-taupe pb-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Event For</label>
+<div class="flex items-center justify-between">
+<select class="bg-transparent border-none focus:ring-0 p-0 text-on-surface font-body-md w-full appearance-none">
+<option>Wedding</option>
+<option>Anniversary</option>
+<option>Birthday</option>
+<option>Corporate Event</option>
+</select>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<!-- Estimated Servings -->
+<div class="flex flex-col border-b border-taupe pb-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-1">Estimated Servings (Quantity)</label>
+<input class="bg-transparent border-none focus:ring-0 p-0 text-on-surface font-body-md w-full" placeholder="e.g. 50" type="number"/>
+</div>
+<!-- Additional Information -->
+<div class="flex flex-col border-b border-taupe pb-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Additional Information</label>
+<textarea class="bg-transparent border-none focus:ring-0 p-0 text-on-surface font-body-md w-full resize-none" placeholder="Tell us about your vision..." rows="3"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-espresso text-white rounded-full py-4 font-label-caps text-label-caps tracking-widest mt-8 hover:opacity-90 transition-opacity uppercase" type="submit">
+                SUBMIT INQUIRY
+            </button>
+</form>
+</div>
+<!-- Location Section -->
+<div class="px-6 pb-12 flex flex-col items-center text-center">
+<div class="w-full h-32 bg-surface-container-high rounded-xl mb-4 flex items-center justify-center overflow-hidden border border-taupe">
+<!-- Map Placeholder -->
+<div class="w-full h-full bg-surface-variant flex items-center justify-center" data-location="New York" style="">
+<span class="material-symbols-outlined text-surface-tint text-4xl">map</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-white">124 Heritage Lane, Bakery District, NY 10001</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 border-t border-stone-200 dark:border-stone-800 flat no shadows fixed bottom-0 left-0 w-full flex justify-around items-center bg-white dark:bg-stone-950 px-8 pb-6 pt-3">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-stone-600 dark:hover:text-stone-300 font-serif text-[11px] tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span>Home</span>
+</a>
+<!-- Menu (Inactive) -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-stone-600 dark:hover:text-stone-300 font-serif text-[11px] tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="restaurant_menu">restaurant_menu</span>
+<span>Menu</span>
+</a>
+<!-- Profile (Inactive - None specifically active for Inquiry, defaulting to Menu if forced, but keeping inactive for pure content focus as per rules, wait, Inquiry isn't a top-level tab. We will leave all inactive to prioritize canvas, or hide nav? Rule: "If the user is in a focused journey... hide the shell". Inquiry is a form/transaction. The prompt requested: "Footer: Standard BottomNavBar for mobile navigation." We must follow prompt over rules if explicit, but let's highlight none as it's a specific page, or Home if required. Let's make none active to reflect it's a sub-page, or just render it as requested. I'll make Home inactive, Menu inactive, Profile inactive.) -->
+<a class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-600 hover:text-stone-600 dark:hover:text-stone-300 font-serif text-[11px] tracking-widest uppercase" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>
