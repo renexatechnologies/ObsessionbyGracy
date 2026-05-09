@@ -71,7 +71,6 @@ export const TopNavBar: React.FC<TopNavBarProps> = () => {
                     {link.icon}
                   </span>
                   <span className="hidden md:inline">{link.label}</span>
-                  <span className="md:hidden">{link.label}</span>
                 </div>
 
                 {/* Active indicator dot */}
