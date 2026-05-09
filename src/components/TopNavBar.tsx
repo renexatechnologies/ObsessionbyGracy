@@ -8,7 +8,23 @@ export const TopNavBar: React.FC<TopNavBarProps> = () => {
   const location = useLocation();
   const { totalWeight } = useCart();
   const [scrolled, setScrolled] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') === 'dark';
+    }
+    return false;
+  });
   const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [darkMode]);
 
   useEffect(() => {
     if (!isHome) {
@@ -30,21 +46,21 @@ export const TopNavBar: React.FC<TopNavBarProps> = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
       scrolled
-        ? 'bg-white/90 backdrop-blur-xl shadow-lg shadow-black/5'
+        ? 'bg-white/90 dark:bg-stone-900/90 backdrop-blur-xl shadow-lg shadow-black/5'
         : 'bg-transparent'
     }`}>
-      <div className="flex justify-between items-center w-full px-4 md:px-8 py-3 max-w-[1200px] mx-auto">
+      <div className="flex justify-between items-center w-full px-3 md:px-8 py-3 max-w-[1200px] mx-auto">
         {/* Logo */}
-        <Link to="/" className="group flex items-center gap-2">
-          <span className={`text-2xl md:text-3xl font-serif italic transition-colors duration-300 ${
-            scrolled ? 'text-stone-900' : 'text-white'
+        <Link to="/" className="group flex items-center gap-2 flex-shrink-0">
+          <span className={`text-xl md:text-3xl font-serif italic transition-colors duration-300 ${
+            scrolled ? 'text-stone-900 dark:text-stone-100' : 'text-white'
           } group-hover:text-[#8C9567]`}>
             Gracy's
           </span>
         </Link>
 
         {/* Nav Buttons */}
-        <div className="flex items-center gap-1.5 md:gap-3">
+        <div className="flex items-center gap-1 md:gap-3">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.href;
             return (
@@ -54,20 +70,20 @@ export const TopNavBar: React.FC<TopNavBarProps> = () => {
                 className="group relative"
               >
                 <div className={`
-                  relative flex items-center gap-1.5 md:gap-2 px-3.5 py-2 md:px-5 md:py-2.5
+                  relative flex items-center gap-1 md:gap-2 px-2.5 py-2 md:px-5 md:py-2.5
                   rounded-xl font-serif text-[11px] md:text-[12px] tracking-[0.12em] uppercase font-bold
                   transition-all duration-400 ease-out
                   ${isActive
                     ? 'bg-[#8C9567] text-white shadow-lg shadow-[#8C9567]/30'
                     : scrolled
-                      ? 'text-stone-600 hover:text-[#8C9567]'
+                      ? 'text-stone-600 dark:text-stone-300 hover:text-[#8C9567]'
                       : 'text-white/80 hover:text-white'
                   }
                   ${!isActive && 'hover:bg-white/10 hover:backdrop-blur-sm'}
                 `}>
-                  <span className={`material-symbols-outlined text-[14px] md:text-[16px] transition-transform duration-300 group-hover:scale-110 ${
+                  <span className={`material-symbols-outlined text-[16px] md:text-[18px] transition-transform duration-300 group-hover:scale-110 ${
                     isActive ? 'text-white' : ''
-                  }`} style={{ fontVariationSettings: "'wght' 300, 'FILL' 0" }}>
+                  }`}>
                     {link.icon}
                   </span>
                   <span className="hidden md:inline">{link.label}</span>
@@ -89,17 +105,30 @@ export const TopNavBar: React.FC<TopNavBarProps> = () => {
           })}
 
           {/* Divider */}
-          <div className={`w-px h-6 mx-1 transition-colors duration-300 ${scrolled ? 'bg-stone-200' : 'bg-white/20'}`}></div>
+          <div className={`w-px h-6 mx-0.5 md:mx-1 transition-colors duration-300 ${scrolled ? 'bg-stone-200 dark:bg-stone-700' : 'bg-white/20'}`}></div>
+
+          {/* Light/Dark Toggle */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className={`group relative flex items-center p-2 rounded-xl transition-all duration-300 hover:bg-white/10 ${
+              scrolled ? 'text-stone-600 dark:text-stone-300' : 'text-white'
+            }`}
+            aria-label="Toggle light/dark mode"
+          >
+            <span className="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+              {darkMode ? 'light_mode' : 'dark_mode'}
+            </span>
+          </button>
 
           {/* Cart */}
           <Link to="/cart" className="group relative flex items-center gap-1.5 p-2 rounded-xl transition-all duration-300 hover:bg-white/10">
             <span className={`material-symbols-outlined text-[22px] transition-all duration-300 group-hover:scale-110 ${
               scrolled ? 'text-[#8C9567]' : 'text-white'
-            }`} style={{ fontVariationSettings: "'wght' 300" }}>
+            }`}>
               shopping_bag
             </span>
             {totalWeight > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 text-[9px] font-bold bg-[#8C9567] text-white px-1.5 py-0.5 rounded-full min-w-[20px] text-center ring-2 ring-white animate-[fadeInUp_0.3s_ease-out_both]">
+              <span className="absolute -top-0.5 -right-0.5 text-[9px] font-bold bg-[#8C9567] text-white px-1.5 py-0.5 rounded-full min-w-[20px] text-center ring-2 ring-white dark:ring-stone-900 animate-[fadeInUp_0.3s_ease-out_both]">
                 {totalWeight}
               </span>
             )}

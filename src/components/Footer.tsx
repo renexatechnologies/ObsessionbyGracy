@@ -7,11 +7,11 @@ export interface FooterProps {}
 export const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="w-full bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800">
-      <div className="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 mt-20 max-w-[1200px] mx-auto">
-        <div className="text-xl font-serif tracking-tighter text-stone-900 dark:text-stone-100 ease-in-out duration-200 mb-6 md:mb-0">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-10 md:py-16 max-w-[1200px] mx-auto gap-6">
+        <div className="text-xl font-serif tracking-tighter text-stone-900 dark:text-stone-100 ease-in-out duration-200">
           Gracy's
         </div>
-        <div className="flex flex-wrap justify-center gap-6 font-serif text-xs tracking-wider uppercase mb-6 md:mb-0">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6 font-serif text-xs tracking-wider uppercase">
           {footerLinks.map((link) => (
             <Link 
               key={link.label}
