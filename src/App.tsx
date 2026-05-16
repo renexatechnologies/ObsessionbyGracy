@@ -5,6 +5,9 @@ import { CatalogDesktop } from './pages/CatalogDesktop';
 import { OurStoryDesktop } from './pages/OurStoryDesktop';
 import { BespokeInquiryDesktop } from './pages/BespokeInquiryDesktop';
 import { CartPage } from './pages/CartPage';
+import { ServicesPage } from './pages/ServicesPage';
+import { TestimonialsPage } from './pages/TestimonialsPage';
+import { FAQPage } from './pages/FAQPage';
 import { CartProvider } from './context/CartContext';
 import { ScrollToTop } from './components/ScrollToTop';
 
@@ -19,6 +22,9 @@ const App: React.FC = () => {
           <Route path="/story" element={<OurStoryDesktop />} />
           <Route path="/contact" element={<BespokeInquiryDesktop />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/testimonials" element={<TestimonialsPage />} />
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
@@ -26,3 +32,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import logoImg from '../assets/Logo2.0.png';
 
 export interface TopNavBarProps {}
 
@@ -39,7 +40,10 @@ export const TopNavBar: React.FC<TopNavBarProps> = () => {
 
   const navLinks = [
     { label: "STORY", href: "/story", icon: "auto_stories" },
-    { label: "CATALOG", href: "/catalog", icon: "menu_book" },
+    { label: "SERVICES", href: "/services", icon: "room_service" },
+    { label: "ORDER", href: "/catalog", icon: "shopping_bag" },
+    { label: "REVIEWS", href: "/testimonials", icon: "reviews" },
+    { label: "FAQ", href: "/faq", icon: "help" },
     { label: "CONTACT", href: "/contact", icon: "mail" },
   ];
 
@@ -52,11 +56,13 @@ export const TopNavBar: React.FC<TopNavBarProps> = () => {
       <div className="flex justify-between items-center w-full px-3 md:px-8 py-3 max-w-[1200px] mx-auto">
         {/* Logo */}
         <Link to="/" className="group flex items-center gap-2 flex-shrink-0">
-          <span className={`text-xl md:text-3xl font-serif italic transition-colors duration-300 ${
-            scrolled ? 'text-stone-900 dark:text-stone-100' : 'text-white'
-          } group-hover:text-[#8C9567]`}>
-            Gracy's
-          </span>
+          <img
+            src={logoImg}
+            alt="OG Obsession by Grace"
+            className={`h-10 md:h-14 w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
+              scrolled ? '' : 'drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]'
+            }`}
+          />
         </Link>
 
         {/* Nav Buttons */}

@@ -1,0 +1,75 @@
+# Requirements for Gracy's Web App
+
+## Pages (routes)
+- `/` – HomePageDesktop
+- `/catalog` – CatalogDesktop
+- `/story` – OurStoryDesktop
+- `/contact` – BespokeInquiryDesktop (inquiry/contact page)
+- `/cart` – CartPage (shopping‑cart overview)
+- `/services` – ServicesPage (list of services)
+- `/testimonials` – TestimonialsPage (client stories & reviews)
+- `/faq` – FAQPage (frequently asked questions)
+
+## Core UI Elements
+- **Top navigation bar** – `TopNavBar` component (present on every page)
+- **Footer** – `Footer` component (present on every page)
+- **Hero sections** with headline, sub‑headline and a short description
+- **CTA buttons** with the exact label text:
+  - `START YOUR INQUIRY` (on the hero CTA of the Testimonials page)
+  - `SEND VIA WHATSAPP` (submit button on the Bespoke Inquiry form)
+  - `Book Your Masterpiece` (heading on the Bespoke Inquiry form)
+  - `Read more ↓` / `Show less ↑` (testimonial cards)
+  - `Join Our Story` (subtitle on the CTA section of Testimonials)
+  - `Ready to Be Our Next Happy Customer?` (CTA heading on the CTA section)
+  - `START YOUR INQUIRY` (button under the CTA heading)
+
+## Contact Information
+- **Phone / WhatsApp**: `+91 89191 81618`
+  - Used in the Bespoke Inquiry page (tel link and WhatsApp number)
+- **WhatsApp link** (generated dynamically):
+  `https://wa.me/918919181618?text=<encoded‑message>`
+- **Physical address** (displayed on the Bespoke Inquiry page):
+  `No 182, 3rd Floor, Shree Ramnath Damodar,
+   13th Cross, 4th Main Road,
+   Shree Ananth Nagar Layout, Phase 1,
+   Kammasandra, Hebbagodi, Karnataka — 560100`
+
+## Content Sections
+- **Client Stories** label (now with dark background `#0c0a09`).
+- **Words from Our Gourmands** headline on the Testimonials page.
+- **Testimonials list** – each entry contains:
+  - `name`
+  - `location`
+  - `occasion`
+  - `rating` (displayed as stars)
+  - `text` (review body)
+  - `highlight` (short quote shown on the left side)
+- **Quick quotes marquee** – array of short promotional phrases.
+- **Statistics grid** – three items (`Happy Clients`, `Average Rating`, `Events Catered`).
+- **FAQ** – list of question/answer pairs defined in `src/data/mockData.ts`.
+- **Services** – list of service cards (defined in `src/pages/ServicesPage.tsx`).
+
+## Styling Tokens (required for a premium look)
+- Primary dark background: `#0c0a09`
+- Accent green: `#8C9567`
+- Light background: `#FAF7F2`
+- Text primary: `#0c0a09`
+- Text secondary / highlights: `#8C9567`
+- Dark‑mode backgrounds: `bg-[#0c0a09]` for hero sections, `dark:bg-stone-950` for page backgrounds.
+- Rounded corners: `rounded-2xl` for cards, `rounded-full` for icons/buttons.
+- Shadows: `shadow-md` (default) and `shadow-xl` on hover.
+
+## Functional Requirements
+- **Routing** – React Router v7 routes as listed above.
+- **State management** – `CartContext` provides cart state across pages.
+- **Form submission** – Bespoke Inquiry form opens a WhatsApp chat with a pre‑filled message.
+- **Responsive layout** – Tailwind CSS grid/flex utilities for mobile, tablet and desktop breakpoints.
+- **Dark mode support** – Tailwind `dark:` variants used throughout.
+
+## Assets
+- **Logo** – replace placeholder with branding image (not present in repo).
+- **Hero background images** – optional, can be added via CSS `bg-[url('...')]`.
+- **Icons** – Material Symbols used for phone, send, etc.
+
+---
+*This file enumerates every page, CTA text, contact detail and visual token required to recreate the website from scratch.*

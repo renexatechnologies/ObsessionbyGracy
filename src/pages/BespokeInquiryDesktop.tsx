@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TopNavBar } from '../components/TopNavBar';
 import { Footer } from '../components/Footer';
 
 export interface BespokeInquiryDesktopProps {}
 
 export const BespokeInquiryDesktop: React.FC<BespokeInquiryDesktopProps> = () => {
+  const WHATSAPP_NUMBER = '918919181618'; // +91 89191 81618
+
+  const [eventDate, setEventDate] = useState('');
+  const [flavor, setFlavor] = useState('');
+  const [eventType, setEventType] = useState('');
+  const [quantity, setQuantity] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = [
+      `Hello OG — Obsession by Grace! I'd like to place a bespoke inquiry:`,
+      eventDate   ? `📅 Event Date: ${eventDate}` : '',
+      flavor      ? `🎂 Flavor: ${flavor}` : '',
+      eventType   ? `🎉 Event Type: ${eventType}` : '',
+      quantity    ? `⚖️ Quantity (KG): ${quantity}` : '',
+      message     ? `📝 Additional Info: ${message}` : '',
+    ].filter(Boolean).join('\n');
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+  };
+
   return (
     <div className="bg-[#8C9567] dark:bg-stone-950 text-[#fff7f9] antialiased min-h-screen flex flex-col pt-20 md:pt-24 selection:bg-primary-container selection:text-on-primary">
       <TopNavBar />
@@ -19,23 +42,34 @@ export const BespokeInquiryDesktop: React.FC<BespokeInquiryDesktopProps> = () =>
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4tjIDBpG6L8q6sqJZYOqKMnwffIycK_7Ex497YNq7c2ZzTYK9tcJ8utzjaTBjQ6X5-wU5Z5WVol6INKP6TdDSolA_ub7VLSYioUrfJ8S1qLvD2lYOrbtqrHpxCAUIwGhK7dAyyH3H8MwKgfUxTlVm6Q8KjzhM-5h5aOZ4YTacq18FNYFGAt4cemnPHEJuLkhyAx7vfDw5HbaJC3p4SNKE1qbDyk-je5uOohX_CvYP9HSK34tJGmH1wmma2_7AgRnTWR0ISjeoNmAi" 
             />
           </div>
-          <div className="flex flex-col gap-3 md:gap-4 p-4 md:p-6 bg-stone-50/10 rounded-2xl border border-stone-100/20 backdrop-blur-sm">
-            <div className="w-full h-24 md:h-32 bg-stone-300 rounded-xl flex items-center justify-center overflow-hidden relative">
-              <img 
-                alt="Map location" 
-                className="w-full h-full object-cover opacity-70 grayscale" 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuClYyJ4TchNLyB8n7zKA3f0m9PKaZsJUmfYkbPmdBajdtTLWIX7zkXbl79Yf0HYbFMl4U8zc1aQWExtIhKyedekmv02tnqmnTxLM0VLj6YXaesnjJA54siuKLcHj_gyD7DKCHfoOdPJPHv_hXSLN_Jk-PeavnAPcIoLxHKZXB2hCyTQp0OuJ9qww9GAr_w7cAKFjV6mQAVur3MsCI5RCLTZlRdqwdevT-Q_FUBvLws3-zYzMSR8JEMt5ZMEO_FGveCkyOfGlvvGOYPi" 
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="material-symbols-outlined text-3xl md:text-4xl text-stone-900 drop-shadow-md">location_on</span>
+            <div className="flex flex-col gap-3 md:gap-4 p-4 md:p-6 bg-stone-50/10 rounded-2xl border border-stone-100/20 backdrop-blur-sm">
+              <div className="w-full h-24 md:h-32 bg-stone-300 rounded-xl flex items-center justify-center overflow-hidden relative">
+                <iframe
+                  title="OG Obsession by Grace Location"
+                  className="w-full h-full"
+                  style={{ border: 0, filter: 'grayscale(60%)' }}
+                  loading="lazy"
+                  allowFullScreen
+                  src="https://www.google.com/maps?q=No+182,+3rd+floor,+Shree+Ramnath+Damodar,+13th+cross,+4th+main+road,+Shree+Ananth+Nagar+layout,+Phase+1,+Kammasandra,+Hebbagodi,+Karnataka+560100&output=embed"
+                />
+              </div>
+              <div className="text-stone-50 font-body-md text-[14px] md:text-body-md">
+                <p className="font-bold text-base md:text-lg mb-1">OG — Obsession by Grace</p>
+                <p>No 182, 3rd Floor, Shree Ramnath Damodar,</p>
+                <p>13th Cross, 4th Main Road,</p>
+                <p>Shree Ananth Nagar Layout, Phase 1,</p>
+                <p>Kammasandra, Hebbagodi,</p>
+                <p>Karnataka — 560100</p>
+                <p className="mt-2">🕙 Opens at 10:00 AM</p>
+                <a
+                  href="tel:+918919181618"
+                  className="mt-1 flex items-center gap-1 text-stone-100 hover:text-white underline underline-offset-2"
+                >
+                  <span className="material-symbols-outlined text-[16px]">call</span>
+                  +91 89191 81618
+                </a>
               </div>
             </div>
-            <div className="text-stone-50 font-body-md text-[14px] md:text-body-md">
-              <p className="font-bold text-base md:text-lg mb-1">Gracy's Bakery Flagship</p>
-              <p>124 Heritage Lane</p>
-              <p>Bakery District, NY 10001</p>
-            </div>
-          </div>
         </section>
 
         {/* Right Column: Inquiry Form */}
@@ -46,12 +80,14 @@ export const BespokeInquiryDesktop: React.FC<BespokeInquiryDesktopProps> = () =>
               <p className="font-body-md text-[14px] md:text-body-md text-on-surface-variant dark:text-stone-400">Inquire about our custom heritage cakes for your special event.</p>
             </div>
 
-            <form className="flex flex-col gap-4 md:gap-5 flex-grow">
+            <form className="flex flex-col gap-4 md:gap-5 flex-grow" onSubmit={handleSubmit}>
               <div className="flex flex-col gap-1.5 md:gap-2">
                 <label className="font-label-md text-label-md text-on-surface dark:text-stone-300" htmlFor="event-date">Event Date</label>
                 <input 
                   id="event-date" 
                   type="date" 
+                  value={eventDate}
+                  onChange={e => setEventDate(e.target.value)}
                   className="w-full bg-surface-container-low dark:bg-stone-700 border border-outline-variant dark:border-stone-600 rounded-xl px-4 py-3 font-body-md text-on-surface dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" 
                 />
               </div>
@@ -60,6 +96,8 @@ export const BespokeInquiryDesktop: React.FC<BespokeInquiryDesktopProps> = () =>
                 <label className="font-label-md text-label-md text-on-surface dark:text-stone-300" htmlFor="flavors">Flavors of Choice</label>
                 <select 
                   id="flavors" 
+                  value={flavor}
+                  onChange={e => setFlavor(e.target.value)}
                   className="w-full bg-surface-container-low dark:bg-stone-700 border border-outline-variant dark:border-stone-600 rounded-xl px-4 py-3 font-body-md text-on-surface dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
                 >
                   <option value="">Select a signature flavor...</option>
@@ -75,6 +113,8 @@ export const BespokeInquiryDesktop: React.FC<BespokeInquiryDesktopProps> = () =>
                 <label className="font-label-md text-label-md text-on-surface dark:text-stone-300" htmlFor="event-type">Event For</label>
                 <select 
                   id="event-type" 
+                  value={eventType}
+                  onChange={e => setEventType(e.target.value)}
                   className="w-full bg-surface-container-low dark:bg-stone-700 border border-outline-variant dark:border-stone-600 rounded-xl px-4 py-3 font-body-md text-on-surface dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow"
                 >
                   <option value="">Select event type...</option>
@@ -93,6 +133,8 @@ export const BespokeInquiryDesktop: React.FC<BespokeInquiryDesktopProps> = () =>
                   type="number" 
                   min="10" 
                   placeholder="e.g. 150" 
+                  value={quantity}
+                  onChange={e => setQuantity(e.target.value)}
                   className="w-full bg-surface-container-low dark:bg-stone-700 border border-outline-variant dark:border-stone-600 rounded-xl px-4 py-3 font-body-md text-on-surface dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" 
                 />
               </div>
@@ -103,12 +145,17 @@ export const BespokeInquiryDesktop: React.FC<BespokeInquiryDesktopProps> = () =>
                   id="message" 
                   rows={4} 
                   placeholder="Tell us about your vision, dietary requirements, or specific requests..." 
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
                   className="w-full bg-surface-container-low dark:bg-stone-700 border border-outline-variant dark:border-stone-600 rounded-xl px-4 py-3 font-body-md text-on-surface dark:text-stone-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none flex-grow transition-shadow"
                 ></textarea>
               </div>
 
-              <button className="bg-primary text-on-primary rounded-full px-6 py-3.5 md:py-4 font-button text-[13px] md:text-[15px] w-full mt-2 hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-                SUBMIT INQUIRY <span className="material-symbols-outlined text-[16px] md:text-[18px]">send</span>
+              <button 
+                type="submit"
+                className="bg-primary text-on-primary rounded-full px-6 py-3.5 md:py-4 font-button text-[13px] md:text-[15px] w-full mt-2 hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+              >
+                SEND VIA WHATSAPP <span className="material-symbols-outlined text-[16px] md:text-[18px]">send</span>
               </button>
             </form>
           </div>

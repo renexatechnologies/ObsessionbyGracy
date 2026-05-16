@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TopNavBar } from '../components/TopNavBar';
 import { Footer } from '../components/Footer';
 import { valueProps, signatureProduct } from '../data/mockData';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import introVideo from '../assets/Logo_glow_from_O_to_202605161047_1_1.mp4';
 
 export interface HomePageDesktopProps {}
 
@@ -17,11 +18,24 @@ const googleReviews = [
 ];
 
 export const HomePageDesktop: React.FC<HomePageDesktopProps> = () => {
+  const [showIntro, setShowIntro] = useState(true);
   const valuePropsReveal = useScrollReveal(0.1);
   const featuredReveal = useScrollReveal(0.15);
 
   return (
     <div className="text-on-background min-h-screen flex flex-col bg-[#8C9567] dark:bg-stone-950">
+        {showIntro && (
+          <div className="fixed inset-0 z-50">
+            <video
+              src={introVideo}
+              autoPlay
+              muted
+              playsInline
+              onEnded={() => setShowIntro(false)}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )}
       <TopNavBar />
 
       {/* Hero Section — full-bleed with image */}

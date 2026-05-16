@@ -19,17 +19,20 @@ export const signatureProduct = {
 };
 
 export const footerLinks = [
+  { label: "Our Story", href: "/story" },
+  { label: "Services", href: "/services" },
+  { label: "Catalog", href: "/catalog" },
+  { label: "Testimonials", href: "/testimonials" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Shipping & Returns", href: "#" },
-  { label: "Wholesale", href: "#" },
 ];
 
 export const catalogProducts = [
   // CAKES
   {
     title: "Chocolate Truffle Heritage Cake",
-    price: "£ 1,365.00",
+    price: "₹ 1,365.00",
     image: "/chocolate_truffle_cake.png",
     tag: "Signature",
     bgColor: "bg-[#FAF7F2]",
@@ -37,7 +40,7 @@ export const catalogProducts = [
   },
   {
     title: "Vanilla Bean Celebration Cake",
-    price: "£ 1,250.00",
+    price: "₹ 1,250.00",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIgrF143bI8cvP6IA3ZA3STT7zY1rSSzT-FjSMwktLnCKA2KK8Ex24QWJ6VwKlaXUM3U-BPdfLj63gOhk1PVXJ44guedbkXe8HTKrfe46_wv1nfhR4G5x0CHXb-rWlZrJmRpVL_FtSxuTO74cfiIJItMWW39Ywc0mHTELGuNqOqIQaYbOA03PVwJel4yyZsTFMUFGnD5GfZj346BJNnyEENXLoU6GT4o1rk5eKbASRADDo26OvUAJxoep9EVjecnWWcfuyzpoPtZeG",
     tag: "Seasonal",
     bgColor: "bg-[#F5F2EB]",
@@ -45,7 +48,7 @@ export const catalogProducts = [
   },
   {
     title: "Classic Espresso Opera Cake",
-    price: "£ 1,420.00",
+    price: "₹ 1,420.00",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDQAUmENpCAFj523nmoYjHm7Hxp80iSRiaThyY7aHC90VKlamOJSaqCdobiCYGI62gKoQ8-_nZVEK4tWV2qllUJ4C0tsFNIoD_1QETaoCkuleMA6B6u5Y4Y-5YK_8rhc7tSIuwkwph9oKybAjQZZwn51FQK0tma1Wr-74cgBEXBGlBnadBBAsS-CyYF0q0X9E7AT8xC-Aaj8Hx77hp63wzZSzxP8kz8DbjWKtovhG7OnRZqXxlz4wUZfOip3G4CKXOvaUlPiHxHBK7G",
     tag: "Best Seller",
     bgColor: "bg-[#FAF7F2]",
@@ -53,16 +56,48 @@ export const catalogProducts = [
   },
   {
     title: "Pistachio Rosewater Sponge",
-    price: "£ 1,550.00",
+    price: "₹ 1,550.00",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDp46Fdi8KuB_0iHd49AjSI-uTxTfZPs-FYL77yw89kxZtkKUsV42XURuZOlJuYTuVSQweVN6LkRc3HkA7o7i57YkhRvcsqP505gTvkcWiLPuGJEwqP0kgtaYsMfkhYBASzic3SQWoKy7sB7rzFRwHsWCIQ0QfSKN1dNYSBN7nTG2UaijxG9q-THiUWU4BR9Fz-Io5TV9rhogJbmchkLpfGmDssdx-f-aQR_QIWpJow_JOb1NMyYglrdC7903YYLg1tBIVf2mDV6B_2",
     tag: "New",
     bgColor: "bg-[#F5F2EB]",
     category: "Cakes"
   },
+  {
+    title: "3-Tier Grand Wedding Cake",
+    price: "₹ 4,500.00",
+    image: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&w=800&q=80",
+    tag: "Premium",
+    bgColor: "bg-[#FAF7F2]",
+    category: "Birthday Cakes"
+  },
+  {
+    title: "Rose & Pearl Bridal Cake",
+    price: "₹ 5,200.00",
+    image: "https://images.unsplash.com/photo-1611293388250-580b08c4a145?auto=format&fit=crop&w=800&q=80",
+    tag: "Bespoke",
+    bgColor: "bg-[#F5F2EB]",
+    category: "Wedding Cakes"
+  },
+  {
+    title: "Rainbow Birthday Delight",
+    price: "₹ 980.00",
+    image: "https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&w=800&q=80",
+    tag: "Festive",
+    bgColor: "bg-[#FAF7F2]",
+    category: "Birthday Cakes"
+  },
+  {
+    title: "Floral Party Celebration Cake",
+    price: "₹ 1,100.00",
+    image: "https://images.unsplash.com/photo-1562440499-64c9a111f713?auto=format&fit=crop&w=800&q=80",
+    tag: "Custom",
+    bgColor: "bg-[#F5F2EB]",
+    category: "Party Cakes"
+  },
   // PASTRIES
   {
     title: "Artisanal Almond Croissant",
-    price: "£ 450.00",
+    price: "₹ 450.00",
     image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80",
     tag: "Handcrafted",
     bgColor: "bg-[#FAF7F2]",
@@ -70,7 +105,7 @@ export const catalogProducts = [
   },
   {
     title: "Heritage Fruit Tart",
-    price: "£ 520.00",
+    price: "₹ 520.00",
     image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80",
     tag: "Seasonal",
     bgColor: "bg-[#F5F2EB]",
@@ -78,7 +113,7 @@ export const catalogProducts = [
   },
   {
     title: "Vanilla Bean Mille-Feuille",
-    price: "£ 580.00",
+    price: "₹ 580.00",
     image: "https://images.unsplash.com/photo-1612203985729-70726954388c?auto=format&fit=crop&w=800&q=80",
     tag: "Signature",
     bgColor: "bg-[#FAF7F2]",
@@ -86,7 +121,7 @@ export const catalogProducts = [
   },
   {
     title: "Sicilian Lemon Cannoli",
-    price: "£ 380.00",
+    price: "₹ 380.00",
     image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80",
     tag: "Classic",
     bgColor: "bg-[#F5F2EB]",
@@ -95,15 +130,15 @@ export const catalogProducts = [
   // BREADS
   {
     title: "Ancient Grain Sourdough",
-    price: "£ 320.00",
-    image: "https://images.unsplash.com/photo-1585478259715-876acc5be8eb?auto=format&fit=crop&w=800&q=80",
+    price: "₹ 320.00",
+    image: "/ancient_grain_sourdough.png",
     tag: "Signature",
     bgColor: "bg-[#FAF7F2]",
     category: "Breads"
   },
   {
     title: "Rosemary & Sea Salt Focaccia",
-    price: "£ 280.00",
+    price: "₹ 280.00",
     image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
     tag: "Daily",
     bgColor: "bg-[#F5F2EB]",
@@ -111,7 +146,7 @@ export const catalogProducts = [
   },
   {
     title: "Brioche Nanterre",
-    price: "£ 350.00",
+    price: "₹ 350.00",
     image: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=800&q=80",
     tag: "Rich",
     bgColor: "bg-[#FAF7F2]",
@@ -119,7 +154,7 @@ export const catalogProducts = [
   },
   {
     title: "Spiced Rye Batard",
-    price: "£ 310.00",
+    price: "₹ 310.00",
     image: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=800&q=80",
     tag: "Robust",
     bgColor: "bg-[#F5F2EB]",

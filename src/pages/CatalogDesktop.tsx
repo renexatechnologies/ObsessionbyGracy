@@ -45,8 +45,8 @@ export const CatalogDesktop: React.FC<CatalogDesktopProps> = () => {
         </section>
 
         {/* Filters/Categories */}
-        <section className="flex gap-2 md:gap-4 justify-center mb-6 md:mb-stack-md flex-wrap px-2">
-          {["All Items", "Cakes", "Pastries", "Breads"].map((cat) => (
+        <section className="flex gap-2 md:gap-3 justify-center mb-6 md:mb-stack-md flex-wrap px-2">
+          {["All Items", "Cakes", "Birthday Cakes", "Wedding Cakes", "Party Cakes", "Pastries", "Breads"].map((cat) => (
             <button 
               key={cat}
               onClick={() => setActiveCategory(cat)}
